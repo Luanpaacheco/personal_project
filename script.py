@@ -30,11 +30,13 @@ def login():
         driver.get(url)
         driver.find_element(By.ID, 'username').send_keys(u)
         driver.find_element(By.XPATH, '//*[@id="user-login"]/div[2]/button').click() 
-        time.sleep(5)
+        time.sleep(2)
         driver.find_element(By.ID, 'password').send_keys(s)
-
-        driver.find_element(By.XPATH, '//*[@id="user-login"]/div[3]/div[2]/button').click()
-        time.sleep(5)
+        time.sleep(8)
+        driver.find_element(By.XPATH, '//*[@id="user-login"]/div[4]/div[2]/button').click()
+        
+        
+        
     
 
 
@@ -70,6 +72,7 @@ def check_element_change():
 
 
 login()
+
   
 
 
