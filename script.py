@@ -94,4 +94,3 @@ while True:
     time.sleep(10)  
 
 
-driver.quit()
