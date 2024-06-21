@@ -18,7 +18,7 @@ elementoPrioridade_xpath= '//*[@id="helpdesk"]/div[3]/div[2]/div[2]/div[3]/div/t
 #elementoSetor=""
 
 
-opcoes = webdriver.ChromeOptions()
+opcoes = Options()
 #opcoes.add_argument('--headless=new') 
 service = Service("chromedriver.exe")
 driver = webdriver.Chrome(service=service,options=opcoes)
@@ -34,6 +34,8 @@ def login():
         driver.find_element(By.ID, 'password').send_keys(s)
         time.sleep(8)
         driver.find_element(By.XPATH, '//*[@id="user-login"]/div[4]/div[2]/button').click()
+        time.sleep(5)
+        
         
         
         
@@ -67,11 +69,13 @@ def check_element_change():
         return False
     
 
+
     
 
 
 
 login()
+
 
   
 
